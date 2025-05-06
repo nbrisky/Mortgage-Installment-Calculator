@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2a4d9b;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* Form layout */
+.form-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 20px auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* ✅ change this line */
+  gap: 16px;
+  margin-bottom: 15px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 6px;
+  min-width: 180px;
+}
+
+.field label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.field input {
+  width: 100px;
+  padding: 5px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.button-row button {
+  padding: 8px 18px;
+  background-color: #2a4d9b;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-row button:hover {
+  background-color: #1f3b7c;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+thead {
+  background-color: #c9daf8;
+  font-weight: bold;
+}
+
+.byline {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2a4d9b;
+  margin: 0;
+  padding: 8px 0 0 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 600px) {
+  .field {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100%;
+  }
+
+  .field label, .field input {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .field input {
+    box-sizing: border-box;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-row button {
+    width: 100%;
+  }
+
+  table th, table td {
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+
