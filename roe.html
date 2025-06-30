@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Return on Equity Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">Home</a>
+      <a href="roe.html">ROE Calculator</a>
+      <a href="caprate.html">CAP Rate Calculator</a>
+      <a href="mortgage.html">Amortization Calculator</a>
+      
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Return on Equity (ROE) Calculator</h1>
+    <div class="form-wrapper">
+      <div class="form-row">
+        <div class="field"><label>Purchase Price ($):</label><input type="number" id="purchasePrice" /></div>
+        <div class="field"><label>Down Payment ($):</label><input type="number" id="downPayment" /></div>
+        <div class="field"><label>Interest Rate (%):</label><input type="number" id="interestRate" /></div>
+        <div class="field"><label>Renovation Cost ($):</label><input type="number" id="renovation" /></div>
+        <div class="field"><label>Real Estate Taxes (%):</label><input type="number" id="taxRate" /></div>
+        <div class="field"><label>Monthly Rent ($):</label><input type="number" id="monthlyRent" /></div>
+        <div class="field"><label>Broker Fee ($):</label><input type="number" id="brokerFee" /></div>
+        <div class="field"><label>Annual Operating Expenses ($):</label><input type="number" id="opex" /></div>
+      </div>
+      <div class="button-row">
+        <button onclick="calculateROE()">Calculate ROE</button>
+      </div>
+    </div>
+
+    <h3 style="text-align:center;" id="roeResult"></h3>
+  </div>
+  <script src="roe.js"></script>
+
+</body>
+</html>

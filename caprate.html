@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CAP Rate Calculator</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <nav style="background-color: #2a4d9b; padding: 12px;">
+        <div style="max-width: 1100px; margin: auto; display: flex; gap: 20px;">
+          <a href="index.html" style="color: white; font-weight: bold; text-decoration: none;">Home</a>
+          <a href="roe.html">ROE Calculator</a>
+          <a href="caprate.html" style="color: white; font-weight: bold; text-decoration: none;">CAP Rate Calculator</a>
+          <a href="mortgage.html" style="color: white; font-weight: bold; text-decoration: none;">Amortization Calculator</a>
+
+        </div>
+      </nav>
+      
+    
+    
+      <div class="form-wrapper">
+        <div class="form-row">
+          <div class="field">
+            <label>Property Value ($):</label>
+            <input type="number" id="propertyValue" />
+          </div>
+          <div class="field">
+            <label>Annual Income ($):</label>
+            <input type="number" id="income" />
+          </div>
+          <div class="field">
+            <label>Operating Expenses ($):</label>
+            <input type="number" id="expenses" />
+          </div>
+        </div>
+        <div class="button-row">
+          <button onclick="calculateCapRate()">Calculate CAP Rate</button>
+        </div>
+      </div>
+      
+      <h3 style="text-align:center;" id="capRateResult"></h3>
+      
+
+  </div>
+
+  <script>
+    function calculateCapRate() {
+      const noi = parseFloat(document.getElementById('noi').value);
+      const value = parseFloat(document.getElementById('propertyValue').value);
+      if (isNaN(noi) || isNaN(value) || value === 0) {
+        alert("Please enter valid numbers.");
+        return;
+      }
+      const capRate = (noi / value) * 100;
+      document.getElementById('capRateResult').textContent = `CAP Rate: ${capRate.toFixed(2)}%`;
+    }
+  </script>
+  <script src="caprate.js"></script>
+</body>
+</html>
+

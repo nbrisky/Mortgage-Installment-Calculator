@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Installments</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <nav style="background-color: #2a4d9b; padding: 12px;">
+    <div style="max-width: 1100px; margin: auto; display: flex; gap: 20px;">
+        <a href="index.html" style="color: white; font-weight: bold; text-decoration: none;">Home</a>
+        <a href="roe.html">ROE Calculator</a>
+        <a href="caprate.html" style="color: white; font-weight: bold; text-decoration: none;">CAP Rate Calculator</a>
+        <a href="mortgage.html" style="color: white; font-weight: bold; text-decoration: none;">Amortization Calculator</a>
+        
+    </div>
+  </nav>
+  
+  
+  <div class="container">
+    <h1>Amortization Installations</h1>
+    
+    
+    <div class="form-wrapper">
+      <div class="form-row">
+        <div class="field"><label>Property Cost: $</label><input type="number" id="propertyCost" value="500000" /></div>
+        <div class="field"><label>Principal Amount: $</label><input type="number" id="loanAmount" value="400000" /></div>
+        <div class="field"><label>Annual CAP Rate (%):</label><input type="number" id="capRate" value="7" /></div>
+        <div class="field"><label>Annual Interest Rate (%):</label><input type="number" id="interestRate" value="6" /></div>
+      </div>
+      <div class="button-row">
+        <button onclick="generateTable()">Calculate</button>
+      </div>
+    </div>
+    
+    
+    
+
+    <table id="mortgage-table">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Cash Payment</th>
+          <th>Interest Expense</th>
+          <th>Principal Reduction</th>
+          <th>Principal Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be filled by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
