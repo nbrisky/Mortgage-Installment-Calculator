@@ -190,6 +190,21 @@ nav a {
 nav a:hover {
   background-color: #1f3b7c;
 }
+@media screen and (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center links */
+    gap: 8px;                 /* spacing between links */
+  }
+
+  nav a {
+    display: block;
+    width: 100%;              /* make buttons full width */
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;          /* larger for tapping */
+  }
+}
 
 
 
