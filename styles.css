@@ -190,5 +190,17 @@ nav a {
 nav a:hover {
   background-color: #1f3b7c;
 }
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .field {
+    white-space: normal; /* let labels wrap under inputs */
+  }
+}
+
 
 
